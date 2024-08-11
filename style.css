@@ -1,0 +1,105 @@
+:root,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212; /* Dark background for a sleek look */
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#MyCalculator {
+    background-color: #1E1E1E; /* Darker background for the calculator */
+    padding: 1rem;
+    border-radius: 0.5rem; /* Slightly more rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+#buttonsHolder {
+    display: grid;
+    height: 20rem;
+    width: 15rem;
+    font-size: large;
+    font-weight: bold;
+    grid-template-columns: repeat(4, 1fr); /* Improved readability */
+    gap: 0.5rem; /* Spacing between buttons */
+}
+
+#clear {
+    grid-column: 1 / span 2;
+    background-color: #FF3B3F; /* Red color for the clear button */
+}
+
+#zero {
+    grid-column: 1 / span 2;
+    background-color: #FF3B3F; /* Red color for the zero button */
+}
+
+#equals {
+    grid-area: 4 / 4 / 5 / 5;
+    background-color: #00C853; /* Green color for the equals button */
+}
+
+#display {
+    border: 1px solid #333; /* Darker border for better contrast */
+    border-radius: 0.5rem; /* Slightly more rounded corners */
+    margin-bottom: 1rem;
+    text-align: right;
+    padding: 0.5rem;
+    color: #E0E0E0; /* Lighter text color */
+    background-color: #1E1E1E; /* Consistent with the calculator background */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: larger;
+    font-weight: 900;
+    color: #E0E0E0; /* Lighter text color */
+}
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+    font-weight: 800;
+    background-color: #333; /* Dark background for buttons */
+    color: #E0E0E0; /* Light text color */
+    border: none; /* Remove default border */
+    border-radius: 0.3rem; /* Rounded corners for buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for interactions */
+}
+
+button:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Subtle scaling effect on click */
+}
+
+@media (min-width: 400px) {
+    #buttonsHolder {
+        height: 22rem;
+        width: 16rem;
+    }
+}
+
+@media (min-width: 900px) {
+    #buttonsHolder {
+        height: 24rem;
+        width: 18rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #buttonsHolder {
+        height: 26rem;
+        width: 20rem;
+    }
+}
